@@ -1,0 +1,19 @@
+# application.yaml
+jwt:
+  secret: "VGVzdFNlY3JldEtleSEhQCR8fiZ7XmM2KCloYHZ5enF3ZXJ0eXVpb3Bhc2RmZ2poa3hs" # Chave secreta para assinar o JWT
+  expiration: 3600000 # 1 hora em milissegundos (1000 * 60 * 60)
+
+server:
+  port: 8080 # Porta da aplicação (opcional)
+
+spring:
+  security:
+    user:
+      name: admin # Usuário padrão
+      password: "{bcrypt}$2a$10$dXJ3SW6G7P50lGmMkkmwe.20cQQubK3.HZWzG3YB1tlRy.fqvM/BG" # 123456 codificado
+
+# Configuração opcional para logging (útil para debug)
+logging:
+  level:
+    org.springframework.security: DEBUG
+    com.github.rprojetos: TRACE
